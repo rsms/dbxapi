@@ -1,0 +1,318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3AFB590F1A97BEAC007B8A0C /* dbxapi_darwin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */; };
+		3AFB59101A97BEAC007B8A0C /* dbxapi.hh in Headers */ = {isa = PBXBuildFile; fileRef = 3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */; };
+		3AFB59431A9E3C02007B8A0C /* http_darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AFB59411A9E3C02007B8A0C /* http_darwin.h */; };
+		3AFB59441A9E3C02007B8A0C /* http_darwin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB59421A9E3C02007B8A0C /* http_darwin.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AFB59351A9E3B36007B8A0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFB59311A9E3B36007B8A0C /* json11.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3A5332B81A8D957A0006A8EE;
+			remoteInfo = json11;
+		};
+		3AFB593E1A9E3B57007B8A0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AFB59311A9E3B36007B8A0C /* json11.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5332B71A8D957A0006A8EE;
+			remoteInfo = json11;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3AFB58F31A97BE84007B8A0C /* libdbxapi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdbxapi.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dbxapi_darwin.mm; sourceTree = "<group>"; };
+		3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dbxapi.hh; sourceTree = "<group>"; };
+		3AFB59311A9E3B36007B8A0C /* json11.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = json11.xcodeproj; path = ../json11/json11.xcodeproj; sourceTree = "<group>"; };
+		3AFB59411A9E3C02007B8A0C /* http_darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http_darwin.h; sourceTree = "<group>"; };
+		3AFB59421A9E3C02007B8A0C /* http_darwin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = http_darwin.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AFB58F01A97BE84007B8A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AFB58EA1A97BE84007B8A0C = {
+			isa = PBXGroup;
+			children = (
+				3AFB58F51A97BE84007B8A0C /* dbxapi */,
+				3AFB58F41A97BE84007B8A0C /* Products */,
+				3AFB59311A9E3B36007B8A0C /* json11.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		3AFB58F41A97BE84007B8A0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB58F31A97BE84007B8A0C /* libdbxapi.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AFB58F51A97BE84007B8A0C /* dbxapi */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */,
+				3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */,
+				3AFB59411A9E3C02007B8A0C /* http_darwin.h */,
+				3AFB59421A9E3C02007B8A0C /* http_darwin.mm */,
+			);
+			path = dbxapi;
+			sourceTree = "<group>";
+		};
+		3AFB59321A9E3B36007B8A0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AFB59361A9E3B36007B8A0C /* libjson11.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3AFB58F11A97BE84007B8A0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFB59101A97BEAC007B8A0C /* dbxapi.hh in Headers */,
+				3AFB59431A9E3C02007B8A0C /* http_darwin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3AFB58F21A97BE84007B8A0C /* dbxapi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AFB59071A97BE85007B8A0C /* Build configuration list for PBXNativeTarget "dbxapi" */;
+			buildPhases = (
+				3AFB58EF1A97BE84007B8A0C /* Sources */,
+				3AFB58F01A97BE84007B8A0C /* Frameworks */,
+				3AFB58F11A97BE84007B8A0C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AFB593F1A9E3B57007B8A0C /* PBXTargetDependency */,
+			);
+			name = dbxapi;
+			productName = dbxapi;
+			productReference = 3AFB58F31A97BE84007B8A0C /* libdbxapi.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AFB58EB1A97BE84007B8A0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Dropbox;
+				TargetAttributes = {
+					3AFB58F21A97BE84007B8A0C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3AFB58EE1A97BE84007B8A0C /* Build configuration list for PBXProject "dbxapi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3AFB58EA1A97BE84007B8A0C;
+			productRefGroup = 3AFB58F41A97BE84007B8A0C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3AFB59321A9E3B36007B8A0C /* Products */;
+					ProjectRef = 3AFB59311A9E3B36007B8A0C /* json11.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3AFB58F21A97BE84007B8A0C /* dbxapi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3AFB59361A9E3B36007B8A0C /* libjson11.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjson11.a;
+			remoteRef = 3AFB59351A9E3B36007B8A0C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AFB58EF1A97BE84007B8A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AFB59441A9E3C02007B8A0C /* http_darwin.mm in Sources */,
+				3AFB590F1A97BEAC007B8A0C /* dbxapi_darwin.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AFB593F1A9E3B57007B8A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = json11;
+			targetProxy = 3AFB593E1A9E3B57007B8A0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3AFB59051A97BE85007B8A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3AFB59061A97BE85007B8A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3AFB59081A97BE85007B8A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../json11",
+					"$(SRCROOT)/../rx",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3AFB59091A97BE85007B8A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../json11",
+					"$(SRCROOT)/../rx",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AFB58EE1A97BE84007B8A0C /* Build configuration list for PBXProject "dbxapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFB59051A97BE85007B8A0C /* Debug */,
+				3AFB59061A97BE85007B8A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AFB59071A97BE85007B8A0C /* Build configuration list for PBXNativeTarget "dbxapi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AFB59081A97BE85007B8A0C /* Debug */,
+				3AFB59091A97BE85007B8A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AFB58EB1A97BE84007B8A0C /* Project object */;
+}
