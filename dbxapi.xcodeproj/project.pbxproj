@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9A9BC11ACB6D3A008FABE9 /* dbxapi.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A9BC01ACB6D3A008FABE9 /* dbxapi.cc */; };
 		3AFB590F1A97BEAC007B8A0C /* dbxapi_darwin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */; };
 		3AFB59101A97BEAC007B8A0C /* dbxapi.hh in Headers */ = {isa = PBXBuildFile; fileRef = 3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */; };
 		3AFB59431A9E3C02007B8A0C /* http_darwin.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AFB59411A9E3C02007B8A0C /* http_darwin.h */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A9A9BC01ACB6D3A008FABE9 /* dbxapi.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dbxapi.cc; sourceTree = "<group>"; };
 		3AFB58F31A97BE84007B8A0C /* libdbxapi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdbxapi.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dbxapi_darwin.mm; sourceTree = "<group>"; };
 		3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dbxapi.hh; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				3AFB590E1A97BEAC007B8A0C /* dbxapi.hh */,
+				3A9A9BC01ACB6D3A008FABE9 /* dbxapi.cc */,
 				3AFB590D1A97BEAC007B8A0C /* dbxapi_darwin.mm */,
 				3AFB59411A9E3C02007B8A0C /* http_darwin.h */,
 				3AFB59421A9E3C02007B8A0C /* http_darwin.mm */,
@@ -172,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AFB59441A9E3C02007B8A0C /* http_darwin.mm in Sources */,
+				3A9A9BC11ACB6D3A008FABE9 /* dbxapi.cc in Sources */,
 				3AFB590F1A97BEAC007B8A0C /* dbxapi_darwin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

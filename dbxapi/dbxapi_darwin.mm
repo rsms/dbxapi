@@ -105,43 +105,15 @@ static NSDictionary* NSDictionaryFromParams(const Params& params) {
   return nsparams;
 }
 
-static NSString* kDropboxAPIEndpoint = @"https://api.dropbox.com/1";
-static NSString* kDropboxAPIEndpointNotify = @"https://api-notify.dropbox.com/1";
 
-
-static auto wrapJsonCallback(rx::func<void(Status, Json)> cb) {
-  return [cb](Status st, string data) {
-    if (!st.ok()) {
-      cb(st, nullptr);
-    } else {
-      string err;
-      auto json = Json::parse(data, err);
-      if (json != nullptr && json["error"] != nullptr) {
-        // Some API endpoints will happily return an error with a "OK" protocol status code  :-/
-        cb(Status{json["error"].string_value()}, std::move(json));
-      } else {
-        // JSON parsing might have failed, otherwise we're a go  :-)
-        cb((json == nullptr ? Status{err} : Status::OK()), std::move(json));
-      }
-    }
-  };
-}
-
-
-void GET(const string& path, const Params& params, rx::func<void(Status, Json)> cb) {
-  return GET_raw(path, params, wrapJsonCallback(cb));
-}
-
-void POST(const string& path, const Params& params, rx::func<void(Status, Json)> cb) {
-  return POST_raw(path, params, wrapJsonCallback(cb));
+static NSString* urlForPath(const string& path) {
+  auto nspath = encode_uri_path([[NSString alloc] initWithBytesNoCopy:(void*)path.data() length:path.size() encoding:NSUTF8StringEncoding freeWhenDone:NO]);
+  return [NSString stringWithFormat:@"%s%@", (path == "/longpoll_delta" ? config.apiNotifyURL : config.apiURL).c_str(), nspath];
 }
 
 
 void GET_raw(const string& path, const Params& params, rx::func<void(Status, string)> cb) {
-  auto nspath = [[NSString alloc] initWithBytesNoCopy:(void*)path.data() length:path.size() encoding:NSUTF8StringEncoding freeWhenDone:NO];
-  nspath = encode_uri_path(nspath);
-  NSString* endpoint = path == "/longpoll_delta" ? kDropboxAPIEndpointNotify : kDropboxAPIEndpoint;
-  auto url = [endpoint stringByAppendingString:nspath];
+  auto url = urlForPath(path);
   auto nsparams = NSDictionaryFromParams(params);
   #if DBXAPI_DEBUG
   clog << "[dbxapi] request GET " << url.UTF8String << " params="
@@ -168,9 +140,7 @@ void GET_raw(const string& path, const Params& params, rx::func<void(Status, str
 
 
 void POST_raw(const string& path, const Params& params, rx::func<void(Status, string)> cb) {
-  auto nspath = [[NSString alloc] initWithBytesNoCopy:(void*)path.data() length:path.size() encoding:NSUTF8StringEncoding freeWhenDone:NO];
-  nspath = encode_uri_path(nspath);
-  auto url = [kDropboxAPIEndpoint stringByAppendingString:nspath];
+  auto url = urlForPath(path);
   auto nsparams = NSDictionaryFromParams(params);
   #if DBXAPI_DEBUG
   clog << "[dbxapi] request POST " << url.UTF8String << " params="
@@ -193,37 +163,6 @@ void POST_raw(const string& path, const Params& params, rx::func<void(Status, st
     #endif
     dbx_parse_api_response(error, data, res, std::move(cb));
   }];
-}
-
-
-void delta_get(
-   const string& access_token,
-   const string& path_prefix,
-   const string& cursor,
-   rx::func<void(Status, Json)> cb)
-{
-  Params params{
-    {"access_token", access_token},
-    {"path_prefix",  path_prefix},
-  };
-  if (!cursor.empty()) {
-    params.emplace("cursor", cursor);
-  }
-  POST("/delta", params, cb);
-}
-  
-  
-void delta_wait(
-    const string& access_token,
-    const string& cursor,
-    rx::func<void(Status, Json)> cb)
-{
-  assert(!cursor.empty());
-  GET("/longpoll_delta", {
-    {"access_token", access_token},
-    {"cursor",       cursor},
-    {"timeout",      "480"},
-  }, cb);
 }
 
 

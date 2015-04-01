@@ -46,4 +46,11 @@ void delta_wait(
   const string& cursor,
   rx::func<void(Status, Json)> cb);
 
+// Configures the server endpoints used
+struct Config {
+  string apiURL;       // default value: "https://api.dropbox.com/1"
+  string apiNotifyURL; // default value: "https://api-notify.dropbox.com/1"
+};
+extern Config config;
+
 } // namespace
